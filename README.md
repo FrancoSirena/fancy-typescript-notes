@@ -73,4 +73,6 @@ Type Record<K extends keyof any, T> = {
 
 *These are just personal notes*
 
+Exercises resolution by me: https://stackblitz.com/@FrancoSirena
+
 Refer to the slides to see it in depth: https://ts121020.surge.sh/#1
