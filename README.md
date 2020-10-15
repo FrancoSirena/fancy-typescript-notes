@@ -2,13 +2,14 @@
 
 This repo contains notes taken during the Advanced, Fancy Typescript by Michel Westsrate.
 
-Function Overloading:
+## Function Overloading
 - You can have different signatures for the same function, e.g._
     - Function fn(value: string): string
     - Function fn(value: number): Date
     - Function fn(argument: string | number): string | date { }
 
-Mixed typed array:
+## Cool types
+Mixed typed array
 	- cont array: (number | string) = [1, ‘franco’]
 
 Non-null assertion operator: const f = var! ( the exclamation mark )
@@ -17,7 +18,7 @@ Intersections, like extends for Interfaces: `TypeA & TypeB` = must comply with b
 
 Discriminated Unions, you can set const keys on your Interface/Type
 
-Shorthand declaration for classes
+## Shorthand declaration for classes
 ```javascript
 class MyClass {
 	constructor(public a: string, public b: Date) {}
@@ -25,6 +26,7 @@ class MyClass {
 ```
 Automatically declares classes properties a and b and assign it at the constructor level when new MyClass
 
+## Generics
 Generics, it automatically assumes a type as you call the method. If you have N args you can have N Generic types.
 
 A funny way to use it is with extends so it can have a basic set of props, such as:
@@ -32,12 +34,15 @@ A funny way to use it is with extends so it can have a basic set of props, such 
 function myFn<T extends { length: number }>(var: T): T
 ```
 
+## Special types
 `unknown`: First you need to cast it to be able to use it
 
 `any`: It can be ANYTHING, no type check at all
 
 `never`: it is automatically assigned to a piece of code that is “unreachable”, like when using Union operators
 
+
+## Utilities
 To access SubTypes you can just access it by key, e.g.:
 ```javascript
 type NestedType = {
@@ -67,3 +72,5 @@ Type Record<K extends keyof any, T> = {
 ```
 
 *These are just personal notes*
+
+Refer to the slides to see it in depth: https://ts121020.surge.sh/#1
