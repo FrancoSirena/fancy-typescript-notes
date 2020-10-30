@@ -2,6 +2,22 @@
 
 This repo contains notes taken during the Advanced, Fancy Typescript by Michel Westsrate.
 
+## Types
+How to declare a basic type with a function in it and a dynamic one:
+```ts
+type MyType = {
+	typedFb: (arg1: string, arg2: number) => number;
+	name: string;
+	age: number;
+	[key: string]: any;
+}
+```
+
+Using tuples are cool, you can specify how many items it returns and in which position.
+```ts
+useState(initalizer: number) : [number, Function]
+```
+
 ## Function Overloading
 - You can have different signatures for the same function, e.g._
     - Function fn(value: string): string
